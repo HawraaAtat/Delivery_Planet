@@ -21,11 +21,15 @@ return new class extends Migration
             $table->string('menu_name');
             $table->integer('price')->unsigned();
             $table->integer('calorie_count')->unsigned();
-            $table->string('category');
+            $table->string('diet');
+            $table->string('cuisine');
             $table->string('description');
             $table->integer('order_time')->unsigned()->nullable();
             $table->string('image');
             $table->boolean('confirmed')->default(false);
+            $table->string('has_offer')->nullable()->default('no');
+            $table->string('new_price')->nullable();
+            $table->integer('quantity')->unsigned()->nullable();
 
             $table->timestamps();
         });
@@ -40,4 +44,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('menus');
     }
+
+
 };

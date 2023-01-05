@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'confirmed'
     ];
 
     /**
@@ -41,4 +43,42 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
+    // public function menus()
+    // {
+    //     return $this->belongsToMany(Menu::class, 'carts', 'user_id', 'menu_id');
+    // }
+
+    public function cart()
+    {
+        return $this->hasOne(Cart::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    
+
+    
+    public function restaurant()
+    {
+        return $this->hasOne(Restaurant::class);
+    }
+    // $user = User::find(1);
+    // $restaurant = $user->restaurant;
+    // //
+    // $restaurant = Restaurant::find(1);
+    // $user = $restaurant->user;
+
+
 }

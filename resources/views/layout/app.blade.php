@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="{{asset('assests/lib/owlcarousel/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assests/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}">
 
+    @yield('link')
 
 
-
+    @stack('scripts')
+    
 </head>
 
 <body>
@@ -54,24 +56,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
-                </div>
+                @yield('pagelink')
             </nav>
 
             @yield('navbar')
@@ -82,7 +67,9 @@
         @yield('body')
 {{-- /////////////////////////////////////// --}}
 
-    
+
+    </div>
+
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -166,6 +153,7 @@
     <script src="{{asset('assests/lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('assests/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('assests/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+
 
     <!-- Template Javascript -->
     <script src="{{asset('assests/js/main.js')}}"></script>
