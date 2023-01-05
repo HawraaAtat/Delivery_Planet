@@ -92,6 +92,8 @@ class ReviewController extends Controller
             $review = $restaurant->reviews;
             return view('restaurant.review', compact('review', 'restaurant', 'item_cart_count'));
         } else {
+
+            $item_cart_count = 0;
             $restaurant = Restaurant::find($id);
 
             $review = $restaurant->reviews;

@@ -52,7 +52,7 @@ class StoreAddRestaurantController extends Controller
         $image = $request->image;
         
         $fileName = $request->file("fileToUpload")->GetClientOriginalName();
-        $file = $request->file('fileToUpload')->move('img',$fileName);
+        $file = $request->file('fileToUpload')->move('assests/img',$fileName);
         
         
         $restaurant = Restaurant::create([

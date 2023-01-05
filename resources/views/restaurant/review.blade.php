@@ -41,7 +41,6 @@
             </div>
             <a href="{{ url("cart") }}" class="btn btn-primary py-2 px-4 bi bi-cart"></a>
             <span class='badge badge-warning' id='lblCartCount'> {{$item_cart_count}} </span>
-
         </div>
     @endif
 

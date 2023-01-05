@@ -83,8 +83,7 @@
                 </div>
 
             <div class="input-group col-lg-10 col-md-12" style=" justify-content: center; align-items: center;">
-                <button type="submit" class="btn btn-primary"><i class="fa fa-search"> Search</i></button>
-                <a href="{{ url("location_search") }}" class="searchButton btn btn-secondary"><i class="bi bi-geo-alt-fill"></i> Location</a>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"> Search</i></button>      
             </div>
         </form>
         {{-- end of search --}}
